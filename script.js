@@ -1,10 +1,10 @@
-// $(document).ready(() => {
-//     console.log("ready!");
+
 
 searchBtn.on("click", function (event) {
     event.preventDefault();
-  searchBtn.on("click", function (event) {
-    event.preventDefault();
+
+    var searchBtn = $("#city-info-button")
+
     //City Search
     var citySearch = $("#citySearch").val();
     console.log("City Search:", citySearch);
@@ -34,7 +34,7 @@ searchBtn.on("click", function (event) {
       var iconCode = response.weather[0].icon;
       var weatherIcon = "http://openweathermap.org/img/w/" + iconCode + ".png";
       console.log(iconCode);
-      $("#weather-icon").attr("src", weatherIcon);
+      $("#icon-image").attr("src", weatherIcon);
       // Temp
       var temperature = response.main.temp;
       $("#temperature").text(temperature);
@@ -174,4 +174,3 @@ searchBtn.on("click", function (event) {
         console.log("UV Index:", uvIndex);
       });
     });
-//   })
